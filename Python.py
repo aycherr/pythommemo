@@ -23,6 +23,8 @@ cpf=float(2)
 kf = float(0.143)
 Rdf = float(0.000049)
 Sgf = float(0.8)
+visco = float(input(0.0016))
+mv = float(input(800))
 
 #constants general
 R = float(0.88)
@@ -49,7 +51,7 @@ print("Le debit de fluid chaud = ",mc)
 S1 = math.sqrt((math.pow(R,2) + 1 ))* math.log((1-P)/(1-R*P))
 S2 = (R-1)*math.log((2-P*(R+1-(math.sqrt(math.pow(R,2)+1))))/(2-P*(R+1+math.sqrt(math.pow(R,2)+1))))
 Ft = S1/S2
-print(Ft)
+print("le facteur de correction = ",Ft)
 
 #DTLM
 DTa=Tce-Tfs                                                                                                 
@@ -77,12 +79,6 @@ np = float(input())  #variable
 
 print("le diametre interieur :")
 di = float(input())    #variable
-
-print("la viscosity:")
-visco = float(input())    #variable
-
-print("la masse volumique :")
-mv = float(input())    #variable
 
 print("le nombre des tubes assume :")
 nta = float(input())    #variable
